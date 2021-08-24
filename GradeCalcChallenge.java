@@ -9,9 +9,8 @@ public class GradeCalcChallenge {
         double right = input.nextDouble();
         double total = input.nextDouble();
 
-        // make this a method?
-        double score = (right / total) * 100;
-        int gradeValue = (int) Math.round(score);
+        double rawScore = getGrade(right, total);
+        int gradeValue = (int) Math.round(rawScore);
 
         char letterGrade;
 
@@ -28,8 +27,13 @@ public class GradeCalcChallenge {
         }
 
         System.out.println("Student scores " + right + " out of " + total +
-            " for a score of " + score + " which rounds to " + gradeValue +
+            " for a score of " + rawScore + " which rounds to " + gradeValue +
             " and a letter grade of " + letterGrade + ".");
+    }
+
+    public static double getGrade(double right, double total) {
+        double rawScore = (right / total) * 100;
+        return rawScore;
     }
     
 }
