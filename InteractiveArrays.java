@@ -7,7 +7,7 @@ public class InteractiveArrays {
 	public static void main(String[] args) {
 		int size = 5;
 		int[] returnedArr = getIntegers(size);
-        printArray(returnedArr);
+        	printArray(returnedArr);
 		double avg = getAverage(returnedArr);
 		System.out.println("The average of all values in your array is " + avg);
 	}
@@ -29,13 +29,13 @@ public class InteractiveArrays {
 		System.out.println(Arrays.toString(arr));
 	}
 	
-    // My getAverage method for the returnedArr
-    static double getAverage(int[] values) {
-        double sum = 0;
-        for (int i=0; i<values.length; i++) {
-            sum += values[i];
-        }
-        double average = sum / values.length;
-        return average;
-    }
+    	// My getAverage method for the returnedArr
+    	static double getAverage(int[] values) {
+        	double sum = 0;
+        	for (int i=0; i<values.length; i++) {
+            		sum += values[i];
+        	}
+        	double average = sum / values.length;
+        	return average;
+   	}
 }
